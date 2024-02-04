@@ -92,11 +92,10 @@
 				<script type="module" src="node.js">
 				</script>
 
-				<!-- Button to launch node.js script -->
+				<!-- Button to launch node.js script
 				<button id="launchButton" onclick="launchnodeScript()">Launch node.js Script</button>
-
-				<!-- Output area for node.js script -->
-				<div id="outputArea"></div>
+				Output area for node.js script
+				<div id="outputArea"></div> -->
 			</div>
 
 			<footer id="footer">
@@ -161,14 +160,19 @@
 		<script src="assets/js/main.js"></script>
 		<script src=assets/js/node.js></script>
 
-		<script>
-			// Function to launch node.js script
-			function launchnodeScript() {
-				// Your code to launch node.js script and capture output
-				// For demonstration purposes, let's display a sample output
-				var output = "node.js script output goes here.";
-				document.getElementById("outputArea").innerHTML = output;
+		<!-- <script>
+			function launchNodeScript() {
+				$.ajax({
+					type: 'GET',
+					url: '/run-node-script', // Updated endpoint
+					success: function (data) {
+						document.getElementById("outputArea").innerHTML = data;
+					},
+					error: function (error) {
+						console.error('Error:', error);
+					}
+				});
 			}
-		</script>
+		</script> -->
 	</body>
 </html>
