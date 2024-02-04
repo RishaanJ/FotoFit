@@ -89,6 +89,7 @@ function calculateFitnessMetrics() {
   });
 
   axios.request(macrosConfig).then(response => {
+    
     console.log("... FOR RISHAN TO INCLUDE ...")
     console.log(response.data)
     // document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
