@@ -15,13 +15,13 @@ const bodyfat = {
   method: 'GET',
   url: 'https://fitness-calculator.p.rapidapi.com/bodyfat',
   params: {
-    age,
-    gender,
-    weight,
-    height,
-    neck,
-    waist,
-    hip
+    age: age,
+    gender: gender,
+    weight: weight,
+    height: height,
+    neck: neck,
+    waist: waist,
+    hip: hip
   },
   headers: {
     'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
@@ -33,10 +33,10 @@ const macros = {
   method: 'GET',
   url: 'https://fitness-calculator.p.rapidapi.com/macrocalculator',
   params: {
-    age,
-    gender,
-    height,
-    weight,
+    age: age,
+    gender: gender,
+    height: height,
+    weight: weight,
     activitylevel: activityLevel,
     goal: intensityLevel,
   },
