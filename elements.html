@@ -73,56 +73,47 @@
 								<option value="6">6 - (Exercise 6 to 7 times per week)</option>
 								<option value="7">7 - (Very intense exercise daily or physical job)</option>
 							</select>
-							<h2>Hip Circumfrence(cm)</h2>
-							<div class="col-6 col-12-xsmall">
-								<input type="number" name="hip" id="hip" value="" placeholder="Hip circumference(cm)" />
-							</div>	
-							<h2>Height(cm)</h2>
-							<div class="col-6 col-12-xsmall">
-								<input type="number" name="height" id="height" value="" placeholder="height(cm)" />
-							</div>	
-							<h2>Please upload an image of your body</h2>
-							<input type="file" id="img" name="img" accept="image/*">
-							<script type="module" src="node.js">
-							</script>
 						</div>
+						<h2>Hip Circumfrence(cm)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="hip" id="hip" value="" placeholder="Hip circumference(cm)" />
+						</div>	
+						<h2>Height(cm)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="height" id="height" value="" placeholder="height(cm)" />
+						</div>	
+						<h2>Please upload an image of your body</h2>
+						<input type="file" id="img" name="img" accept="image/*">
+						<script type="module" src="node.js">
+						</script>
+						<h2>Muscle areas</h2>
+						<div class="col-12">	
+							<select name="areas" id="areas">
+								<option value="">- Muscle Group -</option>
+								<option value="Biceps">Biceps</option>
+								<option value="Triceps">Triceps</option>
+								<option value="Abs">Abs</option>
+								<option value="Chest">Chests</option>
+								<option value="Back">Back</option>
+								<option value="Legs">Legs</option>
+								<option value="Lats">Lats</option>
+								<option value="Hamstring">Hamstring</option>
+								<option value="Calves">Calves</option>
+								<option value="Quadriceps">Quadriceps</option>
+								<option value="Trapezius">Trapezius</option>
+								<option value="Shoulders">Shoulders</option>
+								<option value="Glutes">Glutes</option>
+								<option value="Stretching">Stretching</option>
+							</select>
+						</div>
+							
+						
 
 				<!-- Button to launch node.js script
 				<button id="launchButton" onclick="launchnodeScript()">Launch node.js Script</button>
 				Output area for node.js script
 				<div id="outputArea"></div> -->
 			</div>
-
-			<footer id="footer">
-				<section>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="3"></textarea>
-							</div>
-							
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-						<!-- <button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics 2</button> -->
-
-					</form>
-					<!-- <button onclick="calculateFitnessMetrics()">Calculate Fitness Metric 3s</button> -->
-
-				</section>
-			</footer>
-		</div>
-
 		<!-- <div>
 			<ul class="actions fit">
 				<li><a href="#" class="button primary fit" onclick="calculateFitnessMetrics()">Fit</a></li>
@@ -152,7 +143,7 @@
 			}
 		</script> -->
 	<!-- Button to trigger the calculation -->
-		<button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics</button>
+		<button onclick="calculateFitnessMetrics()">Submit</button>
 
 		<!-- Div to display the results -->
 		<div id="results">
