@@ -13,7 +13,7 @@ function calculateFitnessMetrics() {
   var age = 25;
   var gender = 'male';
   var weight = 70;
-  var waist = 70;
+  var waist = 102;
   var height = 168;
   var activitylevel = 5;
   var hip = 45;
