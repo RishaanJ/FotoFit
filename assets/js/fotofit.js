@@ -143,10 +143,10 @@ async function getExercises() {
   }
 }
 
-function buttonClick() {
+async function buttonClick() {
   event.preventDefault();
   console.log('Button clicked');
 
-  // Redirect to the specified URL
+  await getExercises(); // Call getExercises to fetch and create cards
   window.location.replace("http://rishaanj.github.io/FotoFit/workoutplanner.html");
 }
