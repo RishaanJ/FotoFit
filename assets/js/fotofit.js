@@ -2,6 +2,7 @@
 function calculateFitnessMetrics() {
   console.log("----- runnign JS--- ")
   var age = document.getElementById('age').value;  
+  var gender = "male";
   console.log(age);
   var weight = 70;
   var height = 178;
@@ -12,7 +13,7 @@ function calculateFitnessMetrics() {
     url: 'https://fitness-calculator.p.rapidapi.com/bodyfat',
     params: {
       age: age.toString(),
-      gender: gender,
+      gender: gender.toString(),
       weight: weight.toString(),
       height: height.toString(),
       neck: '50',
@@ -30,7 +31,7 @@ function calculateFitnessMetrics() {
     url: 'https://fitness-calculator.p.rapidapi.com/macrocalculator',
     params: {
       age: age.toString(),
-      gender: gender,
+      gender: gender.toString(),
       height: height.toString(),
       weight: weight.toString(),
       activitylevel: activitylevel.toString(),
