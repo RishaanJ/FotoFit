@@ -19,7 +19,7 @@ function calculateFitnessMetrics() {
       hip: '92'
     },
     headers: {
-      'X-RapidAPI-Key': 'YOUR_API_KEY_HERE',
+      'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
       'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
     }
   };
@@ -36,7 +36,7 @@ function calculateFitnessMetrics() {
       goal: 'extremelose',
     },
     headers: {
-      'X-RapidAPI-Key': 'YOUR_API_KEY_HERE',
+      'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
       'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
     }
   };
