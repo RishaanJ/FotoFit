@@ -1,6 +1,6 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  console.log("----- runnign JS 9--- ")
+  console.log("----- runnign JS 9`--- ")
   var age = document.getElementById('age').value;  
   var gender = "male";
   console.log(age);
@@ -87,4 +87,14 @@ function calculateFitnessMetrics() {
     console.error(error);
     document.getElementById('results').innerHTML = 'An error occurred. Please try again.';
   });
+
+  axios.request(macrosConfig).then(response => {
+    console.log("... FOR RISHAN TO INCLUDE ...")
+    console.log(response.data)
+    // document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
+  }).catch(error => {
+    console.error(error);
+    document.getElementById('results').innerHTML = 'An error occurred. Please try again.';
+  });
+
 }
