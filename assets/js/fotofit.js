@@ -1,15 +1,23 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
   console.log("----- runnign JS 13`--- ")
-  var defaultValue = 70;
-  var age = document.getElementById('age').value ?? 25;
-  var gender = document.getElementById('gender').value ?? 'male';
-  var weight = document.getElementById('weight').value ?? 70;
-  var waist = document.getElementById('waist').value ?? 70;
-  var height = document.getElementById('height').value ?? 178;
-  var activitylevel = document.getElementById('activitylevel').value ?? 5;
-  var hip = document.getElementById('hip').value ?? 90;
-  var neck = document.getElementById('neck').value?? 50;
+  // var defaultValue = 70;
+  // var age = document.getElementById('age').value ?? 25;
+  // var gender = document.getElementById('gender').value ?? 'male';
+  // var weight = document.getElementById('weight').value ?? 70;
+  // var waist = document.getElementById('waist').value ?? 70;
+  // var height = document.getElementById('height').value ?? 178;
+  // var activitylevel = document.getElementById('activitylevel').value ?? 5;
+  // var hip = document.getElementById('hip').value ?? 90;
+  // var neck = document.getElementById('neck').value?? 50;
+  var age = 25;
+  var gender = 'male';
+  var weight = 70;
+  var waist = 70;
+  var height = 168;
+  var activitylevel = 5;
+  var hip = 45;
+  var neck = 30;
 
   const bodyfatConfig = {
     method: 'GET',
