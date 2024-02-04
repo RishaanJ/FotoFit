@@ -17,23 +17,6 @@ const options = {
 
 
 
-function buttonClick() {
-  console.log('Button clicked');
-
-  // Redirect to the specified URL
-  window.location.href = "http://rishaanj.github.io/FotoFit/workoutplanner.html";
-
-  // Log a message after the redirection
-  console.log('Redirected to workoutplanner.html');
-
-  // Call the getExercises function
-  getExercises();
-  console.log('getExercises() called');
-
-  // Call the calculateFitnessMetrics function
-  calculateFitnessMetrics();
-  console.log('calculateFitnessMetrics() called');
-}
 
 
 function createCard(obj) {
@@ -158,4 +141,22 @@ async function getExercises() {
   } catch (error) {
     console.error(error);
   }
+}
+
+function buttonClick() {
+  console.log('Button clicked');
+
+  // Redirect to the specified URL
+  window.location.href = "http://rishaanj.github.io/FotoFit/workoutplanner.html";
+
+  // Log a message after the redirection
+  console.log('Redirected to workoutplanner.html');
+
+  // Call the getExercises function
+  getExercises();
+  console.log('getExercises() called');
+
+  // Call the calculateFitnessMetrics function
+  calculateFitnessMetrics();
+  console.log('calculateFitnessMetrics() called');
 }
