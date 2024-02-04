@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+  
+}
+
+.exercises {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 600px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 10px;
+  margin-top: 30px;
+  border: 2px solid transparent; /* Add a transparent border */
+  cursor: pointer; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+#reps {
+  margin-left: auto;
+}
+
+#title {
+  flex: 1;
+}
+
+.card-body {
+  text-align: right;
+  font-size: 25px;
+}
+
+/* Add any additional styles as needed */
