@@ -1,0 +1,161 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Demo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/fotofit.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	</head>
+	<body class="is-preload">
+
+
+		<div id="wrapper" class="fade-in">
+			<div id="intro">
+				<h1>Demo</h1>
+				<p>Please answer the following: </p>
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="elements.html">Demo</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<form method="post" action="#">
+					<div class="row gtr-uniform">
+						<h2>Age</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="age" id="age" value="" placeholder="Age" />
+						</div>
+						<h2>Weight(kg)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="weight" id="weight" value="" placeholder="Weight(kg)" />
+						</div>
+						<!-- Break -->
+						<h2>Biological Gender</h2>
+						<div class="col-12">	
+							<select name="gender" id="gender">
+								<option value="">- Biological Sex -</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</div>
+						<h2>Neck Circumfrence(cm)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="neck" id="neck" value="" placeholder="Neck circumference(cm)" />
+						</div>
+						<h2>Waist Circumfrence(cm)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="waist" id="waist" value="" placeholder="Waist circumference(cm)" />
+						</div>
+						<h2>Activity Level</h2>
+						<div class="col-12">	
+							<select name="activitylevel" id="activitylevel">
+								<option value="">- Activity Level -</option>
+								<option value="1">1 - Little to no exercise</option>
+								<option value="2">2 - (Exercise 1 to 3 times per week)</option>
+								<option value="3">3 - (Exercise 3 to 4 times per week)</option>
+								<option value="4">4 - (Exercise 4 to 5 times per week)</option>
+								<option value="5">5 - (Exercise 5 to 6 times per week)</option>
+								<option value="6">6 - (Exercise 6 to 7 times per week)</option>
+								<option value="7">7 - (Very intense exercise daily or physical job)</option>
+							</select>
+						</div>
+						<h2>Hip Circumfrence(cm)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="hip" id="hip" value="" placeholder="Hip circumference(cm)" />
+						</div>	
+						<h2>Height(cm)</h2>
+						<div class="col-6 col-12-xsmall">
+							<input type="number" name="height" id="height" value="" placeholder="height(cm)" />
+						</div>	
+						<h2>Please upload an image of your body</h2>
+						<input type="file" id="img" name="img" accept="image/*">
+						<script type="module" src="node.js">
+						</script>
+						<h2>Muscle areas</h2>
+						<div class="col-12">	
+							<select name="areas" id="areas">
+								<option value="">- Muscle Group -</option>
+								<option value="Biceps">Biceps</option>
+								<option value="Triceps">Triceps</option>
+								<option value="Abs">Abs</option>
+								<option value="Chest">Chests</option>
+								<option value="Back">Back</option>
+								<option value="Legs">Legs</option>
+								<option value="Lats">Lats</option>
+								<option value="Hamstring">Hamstring</option>
+								<option value="Calves">Calves</option>
+								<option value="Quadriceps">Quadriceps</option>
+								<option value="Trapezius">Trapezius</option>
+								<option value="Shoulders">Shoulders</option>
+								<option value="Glutes">Glutes</option>
+								<option value="Stretching">Stretching</option>
+							</select>
+						</div>
+							
+						
+
+				<!-- Button to launch node.js script
+				<button id="launchButton" onclick="launchnodeScript()">Launch node.js Script</button>
+				Output area for node.js script
+				<div id="outputArea"></div> -->
+			</div>
+		<!-- <div>
+			<ul class="actions fit">
+				<li><a href="#" class="button primary fit" onclick="calculateFitnessMetrics()">Fit</a></li>
+			</ul>
+		</div> -->
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- <script>
+			function launchNodeScript() {
+				$.ajax({
+					type: 'GET',
+					url: '/run-node-script', // Updated endpoint
+					success: function (data) {
+						document.getElementById("outputArea").innerHTML = data;
+					},
+					error: function (error) {
+						console.error('Error:', error);
+					}
+				});
+			}
+		</script> -->
+	<!-- Button to trigger the calculation -->
+		<button onclick="buttonClick()">Submit</button>
+
+		<!-- Div to display the results -->
+		<div id="results">
+			
+		</div>
+
+		<!-- Include Axios from CDN -->
+		
+
+		<!-- Include the external JavaScript file -->
+		
+	</body>
+</html>
