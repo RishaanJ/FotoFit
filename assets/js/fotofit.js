@@ -144,6 +144,7 @@ async function getExercises() {
 }
 
 function buttonClick() {
+  event.preventDefault();
   console.log('Button clicked');
 
   // Redirect to the specified URL
