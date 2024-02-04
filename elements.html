@@ -29,8 +29,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="elements.html">Home</a></li>
-							<li class="active"><a href="index.html">Demo</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="elements.html">Demo</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -172,5 +172,178 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+	</body>
+</html>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Demo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper" class="fade-in">
+			<div id="intro">
+				<h1>Demo</h1>
+				<p>Please follow the steps below</p>
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="elements.html">Home</a></li>
+					<li class="active"><a href="index.html">Demo</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<h2>Please input your age</h2>
+				<input type="number" id="age" name="age" min="1" max="80">
+				<h2>Please state your biological sex:</h2>
+				<select id="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				</select>
+				<h2>Please input your weight (kg)</h2>
+				<input type = "number" id = "weight" name = "weight" min = "40" max = "160">
+				<h2>Please input your height (cm)</h2>
+				<input type = "number" id = "height" name = "height" min = "130" max = "230">
+				<h2>Please input your neck circumference (cm)</h2>
+				<input type = "number" id = "neck" name = "neck" min = "20" max = "80">
+				<h2>Please input your waist circumference (cm)</h2>
+				<input type = "number" id = "waist" name = "waist" min = "40" max = "130">
+				<h2>Please input your hip circumference (cm)</h2>
+				<input type = "number" id = "hip" name = "hip" min = "40" max = "130">
+				<h2>How often do you workout on a scale of 1 to 7?</h2>
+				<ol>
+				<li>
+					<p>Little to no exercise</p>
+				</li>
+				<li>
+					<p>Exercise 1 to 3 times per week</p>
+				</li>
+				<li>
+					<p>Exercise 4 to 5 times per week</p>
+				</li>
+				<li>
+					<p>Daily exercise or intense exercise 3 to 4 times a week</p>
+				</li>
+				<li>
+					<p>Intense exercise 6 to 7 times per week</p>
+				</li>
+				<li>
+					<p>Very intense exercise daily or physical job</p>
+				</li>
+				</ol>
+				<select id="activity">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+				
+				<h2>Please select your intensity level </h2>
+				<select id="activity">
+					<option value="Beginner">Beginner</option>
+					<option value="Intermediate">Intermediate</option>
+					<option value="Advanced">Advanced</option>
+				</select>
+				
+				<h2>Please upload an image of your body</h2>
+				<input type="file" id="img" name="img" accept="image/*">
+				<script type="module" src="node.js">
+				</script>
+
+				<!-- Button to launch node.js script -->
+				<button id="launchButton" onclick="launchnodeScript()">Launch node.js Script</button>
+
+				<!-- Output area for node.js script -->
+				<div id="outputArea"></div>
+			</div>
+
+			<footer id="footer">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>San Francisco<br />
+						California</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="#">(510) 709-5911</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="#">FotoFit@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<div id="copyright">
+				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			// Function to launch node.js script
+			function launchnodeScript() {
+				// Your code to launch node.js script and capture output
+				// For demonstration purposes, let's display a sample output
+				var output = "node.js script output goes here.";
+				document.getElementById("outputArea").innerHTML = output;
+			}
+		</script>
 	</body>
 </html>

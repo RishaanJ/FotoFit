@@ -1,27 +1,23 @@
 import axios from 'axios';
 
-// Get values from HTML form
-const age = document.getElementById('age').value;
-const gender = document.getElementById('gender').value;
-const weight = document.getElementById('weight').value;
-const height = document.getElementById('height').value;
-const neck = document.getElementById('neck').value;
-const waist = document.getElementById('waist').value;
-const hip = document.getElementById('hip').value;
-const activityLevel = document.getElementById('activity').value;
-const intensityLevel = document.getElementById('intensity').value;
-// Create request objects
+// Assuming these are the actual values or constants
+var age = 25;
+var gender = 'male';
+var weight = 70;
+var height = 178;
+var activitylevel = 5;
+
 const bodyfat = {
   method: 'GET',
   url: 'https://fitness-calculator.p.rapidapi.com/bodyfat',
   params: {
-    age: age,
+    age: age.toString(),
     gender: gender,
-    weight: weight,
-    height: height,
-    neck: neck,
-    waist: waist,
-    hip: hip
+    weight: weight.toString(),
+    height: height.toString(),
+    neck: '50',
+    waist: '96',
+    hip: '92'
   },
   headers: {
     'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
@@ -33,12 +29,12 @@ const macros = {
   method: 'GET',
   url: 'https://fitness-calculator.p.rapidapi.com/macrocalculator',
   params: {
-    age: age,
+    age: age.toString(),
     gender: gender,
-    height: height,
-    weight: weight,
-    activitylevel: activityLevel,
-    goal: intensityLevel,
+    height: '180',
+    weight: weight.toString(),
+    activitylevel: activitylevel.toString(),
+    goal: 'extremelose',
   },
   headers: {
     'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
@@ -46,13 +42,50 @@ const macros = {
   }
 };
 
-// Make API requests
-
 try {
   const response = await axios.request(macros);
-  console.log(response.data);
+  console.log(response.data.data.balanced);
+  
   const response2 = await axios.request(bodyfat);
-  console.log(response2.data);
+  const bodyFatValue = parseFloat(response2.data.data['Body Fat (U.S. Navy Method)']);
+  console.log(bodyFatValue);
+
+  var activity;
+  var bmr;
+
+  if (gender == 'male') {
+    bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+  } else {
+    bmr = (10 * weight) + (6.25 * height) - (5 * age) - 16;
+  }
+
+  if (activitylevel == 1) {
+    activity = 1.15;
+  } 
+  if (activitylevel == 2) {
+    activity = 1.35
+  }
+  if (activitylevel == 3) {
+    activity = 1.55
+  }
+  if (activitylevel == 4) {
+    activity = 1.75
+  }
+  if (activitylevel == 5) {
+    activity = 1.75
+  }
+  if (activitylevel == 6) {
+    activity = 1.95
+  }
+  if (activitylevel == 6) {
+    activity = 2
+  }
+
+  var calDeficit = (bmr * activity) * 0.25;
+  var totalCal = (3500 * (bodyFatValue - (weight * 0.1)));
+  console.log(calDeficit);
+  console.log(totalCal);
+  console.log(Math.floor(totalCal/calDeficit));
 } catch (error) {
   console.error(error);
 }
