@@ -1,6 +1,6 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  console.log("----- runnign JS 11`--- ")
+  console.log("----- runnign JS 12`--- ")
   var defaultValue = 70;
   var age = document.getElementById('age').value ?? 25;
   var gender = document.getElementById('gender').value ?? 'male';
@@ -9,7 +9,7 @@ function calculateFitnessMetrics() {
   var activitylevel = document.getElementById('activitylevel').value ?? 5;
   var hip = document.getElementById('hip').value ?? 90;
   var neck = document.getElementById('neck').value?? 50;
-  
+
   const bodyfatConfig = {
     method: 'GET',
     url: 'https://fitness-calculator.p.rapidapi.com/bodyfat',
@@ -18,8 +18,8 @@ function calculateFitnessMetrics() {
       gender: gender.toString(),
       weight: weight.toString(),
       height: height.toString(),
-      neck: neck.toString(),
-      waist: neck.toString(),
+      neck: neck.toString,
+      waist: waist.toString(),
       hip: hip.toString()
     },
     headers: {
@@ -83,8 +83,6 @@ function calculateFitnessMetrics() {
   
     var calDeficit = (bmr * activity) * 0.25;
     var totalCal = (3500 * (bodyFatValue - (weight * 0.1)));
-    var days = Math.floor(totalCal/calDeficit);
-    console.log(response2.data.data['Body Fat (U.S. Navy Method)'])
 
     document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
   }).catch(error => {
@@ -92,10 +90,8 @@ function calculateFitnessMetrics() {
     document.getElementById('results').innerHTML = 'An error occurred. Please try again.';
   });
 
-//Rishaan's code -------------------------------------------------------------------------------//
-
   axios.request(macrosConfig).then(response => {
-    console.log
+
     console.log("... FOR RISHAN TO INCLUDE ...")
     console.log(response.data)
     // document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
