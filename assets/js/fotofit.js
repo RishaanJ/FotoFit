@@ -38,7 +38,7 @@ async function getExercises() {
   
 }
 
-function clickedButton(){
+function buttonClick(){
   window.location.replace("RishaanJ.github.io/FotoFit/workoutplan.html);
   getExercises();
   calculateFitnessMetrics();
