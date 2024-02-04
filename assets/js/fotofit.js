@@ -1,10 +1,11 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  console.log("----- runnign JS 12`--- ")
+  console.log("----- runnign JS 13`--- ")
   var defaultValue = 70;
   var age = document.getElementById('age').value ?? 25;
   var gender = document.getElementById('gender').value ?? 'male';
   var weight = document.getElementById('weight').value ?? 70;
+  var waist = document.getElementById('waist').value ?? 70;
   var height = document.getElementById('height').value ?? 178;
   var activitylevel = document.getElementById('activitylevel').value ?? 5;
   var hip = document.getElementById('hip').value ?? 90;
