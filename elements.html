@@ -13,7 +13,7 @@
 
 		<div id="wrapper" class="fade-in">
 			<div id="intro">
-				<h1>Demo 14</h1>
+				<h1>Try it out!</h1>
 				<p>Please answer the following: </p>
 				<ul class="actions">
 					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -24,12 +24,6 @@
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
 					<li class="active"><a href="elements.html">Demo</a></li>
-				</ul>
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 				</ul>
 			</nav>
 
@@ -83,36 +77,14 @@
 				<button id="launchButton" onclick="launchnodeScript()">Launch node.js Script</button>
 				Output area for node.js script
 				<div id="outputArea"></div> -->
+							<!-- Button to trigger the calculation -->
+				<button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics</button>
+		
+				<!-- Div to display the results -->
+				<div id="results">
+					<p>Amount of days needed: <span id="days"></span></p>
+				</div>
 			</div>
-
-			<footer id="footer">
-				<section>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="3"></textarea>
-							</div>
-							
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-						<!-- <button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics 2</button> -->
-
-					</form>
-					<!-- <button onclick="calculateFitnessMetrics()">Calculate Fitness Metric 3s</button> -->
-
-				</section>
-			</footer>
 		</div>
 
 		<!-- <div>
@@ -144,13 +116,7 @@
 				});
 			}
 		</script> -->
-	<!-- Button to trigger the calculation -->
-		<button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics</button>
 
-		<!-- Div to display the results -->
-		<div id="results">
-			<p>Amount of days needed: <span id="days"></span></p>
-		</div>
 
 		<!-- Include Axios from CDN -->
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
