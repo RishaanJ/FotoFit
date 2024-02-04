@@ -1,14 +1,9 @@
-
-
-
 let muscle = "Abs";
 let intensity = "Expert";
 
 const url = `https://work-out-api1.p.rapidapi.com/search?Muscles=${muscle}&Intensity_Level=${intensity}`;
 
 const cardsContainer = document.querySelector(".exercises");
-
-
 
 const options = {
   method: 'GET',
@@ -20,62 +15,42 @@ const options = {
   }
 };
 
-
 async function getExercises() {
-  (async () => {
-    try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      for (let i = 0; i < 5; i++) {
-        const card = createCard(result[i]);
-        cardsContainer.appendChild(card);
-      }
-    } catch (error) {
-      console.error(error);
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    for (let i = 0; i < Math.min(result.length, 5); i++) {
+      const card = createCard(result[i]);
+      cardsContainer.appendChild(card);
     }
-  })();
-  
-  
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function buttonClick(){
-  window.location.href = "http://RishaanJ.github.io/FotoFit/workoutplan.html"
+function buttonClick() {
+  window.location.replace("https://RishaanJ.github.io/FotoFit/workoutplan.html");
   getExercises();
   calculateFitnessMetrics();
 }
-
-
-
-
-
-
-
-/*
-
-
-
-*/
-
-
 
 function createCard(obj) {
   const card = document.createElement('div');
   card.className = 'card';
 
-  // Customize the card content based on your API response structure
   card.innerHTML = `
         <div class="card-header">
           <h2 id="title">${obj.WorkOut}</h2>
           <h2 id="reps">${obj['Expert Sets']}</h2>
         </div>
         <div class="card-body">
-          <p>${obj.Explaination}</p>
+          <p>${obj.Explanation}</p>
         </div>
     `;
 
   return card;
 }
-
+}
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
   console.log("----- running JS 13`--- ");
