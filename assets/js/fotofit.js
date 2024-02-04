@@ -1,6 +1,6 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  console.log("----- runnign JS 9`--- ")
+  console.log("----- runnign JS 10`--- ")
   var age = document.getElementById('age').value;  
   var gender = "male";
   console.log(age);
@@ -89,7 +89,7 @@ function calculateFitnessMetrics() {
   });
 
   axios.request(macrosConfig).then(response => {
-    
+
     console.log("... FOR RISHAN TO INCLUDE ...")
     console.log(response.data)
     // document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
