@@ -1,7 +1,83 @@
+
+
+
+let muscle = "Abs";
+let intensity = "Expert";
+
+const url = `https://work-out-api1.p.rapidapi.com/search?Muscles=${muscle}&Intensity_Level=${intensity}`;
+
+const cardsContainer = document.querySelector(".exercises");
+
+
+
+const options = {
+  method: 'GET',
+  url: 'https://work-out-api1.p.rapidapi.com/search',
+  params: { Muscles: 'biceps' },
+  headers: {
+    'X-RapidAPI-Key': '9e447144e7msh9589402264921e8p11153djsn1dc22522fb12',
+    'X-RapidAPI-Host': 'work-out-api1.p.rapidapi.com'
+  }
+};
+
+
+async function getExercises() {
+  (async () => {
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      for (let i = 0; i < 5; i++) {
+        const card = createCard(result[i]);
+        cardsContainer.appendChild(card);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  })();
+  // Calculate days save into a variable
+  // Display variable in the text #days
+  
+  
+}
+
+getExercises();
+
+
+
+
+
+
+
+/*
+
+
+
+*/
+
+
+
+function createCard(obj) {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  // Customize the card content based on your API response structure
+  card.innerHTML = `
+        <div class="card-header">
+          <h2 id="title">${obj.WorkOut}</h2>
+          <h2 id="reps">${obj['Expert Sets']}</h2>
+        </div>
+        <div class="card-body">
+          <p>${obj.Explaination}</p>
+        </div>
+    `;
+
+  return card;
+}
+
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
   console.log("----- running JS 13`--- ");
-  
+
   var age = 25;
   var gender = 'male';
   var weight = 89;
@@ -63,7 +139,7 @@ function calculateFitnessMetrics() {
 
     if (activitylevel == 1) {
       activity = 1.15;
-    } 
+    }
     if (activitylevel == 2) {
       activity = 1.35
     }
@@ -82,7 +158,7 @@ function calculateFitnessMetrics() {
     if (activitylevel == 6) {
       activity = 2
     }
-    
+
     var calDeficit = (bmr * activity) * 0.25;
     var totalCal = (3500 * (bodyFatValue - (weight * 0.1)));
 
