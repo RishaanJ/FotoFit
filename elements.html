@@ -81,11 +81,39 @@
 				<div id="outputArea"></div> -->
 			</div>
 
-			<div>
-				<ul class="actions fit">
-					<li><a href="#" class="button primary fit" onclick="calculateFitnessMetrics()">Fit</a></li>
-				</ul>
-			</div>
+			<footer id="footer">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="3"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
+						<button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics 2</button>
+
+					</form>
+					<button onclick="calculateFitnessMetrics()">Calculate Fitness Metric 3s</button>
+
+				</section>
+			</footer>
+		</div>
+
+		<div>
+			<ul class="actions fit">
+				<li><a href="#" class="button primary fit" onclick="calculateFitnessMetrics()">Fit</a></li>
+			</ul>
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>
