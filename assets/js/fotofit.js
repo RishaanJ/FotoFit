@@ -15,22 +15,26 @@ const options = {
   }
 };
 
-async function getExercises() {
-  try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    for (let i = 0; i < Math.min(result.length, 5); i++) {
-      const card = createCard(result[i]);
-      cardsContainer.appendChild(card);
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
+
 
 function buttonClick() {
-  console.log("Hey")
+  console.log('Button clicked');
+
+  // Redirect to the specified URL
+  window.location.href = "http://rishaanj.github.io/FotoFit/workoutplanner.html";
+
+  // Log a message after the redirection
+  console.log('Redirected to workoutplanner.html');
+
+  // Call the getExercises function
+  getExercises();
+  console.log('getExercises() called');
+
+  // Call the calculateFitnessMetrics function
+  calculateFitnessMetrics();
+  console.log('calculateFitnessMetrics() called');
 }
+
 
 function createCard(obj) {
   const card = document.createElement('div');
@@ -141,4 +145,17 @@ function calculateFitnessMetrics() {
     console.error(error);
     throw new Error('An error occurred. Please try again.');
   });
+}
+
+async function getExercises() {
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    for (let i = 0; i < Math.min(result.length, 5); i++) {
+      const card = createCard(result[i]);
+      cardsContainer.appendChild(card);
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }
