@@ -68,21 +68,7 @@
 							</select>
 							<div class="col-6 col-12-xsmall">
 								<input type="number" name="hip" id="hip" value="" placeholder="Hip circumference(cm)" />
-							</div>
-							<h2>Choose your workout intensity</h2>
-							<div class="col-4 col-12-small">
-								<input type="radio" id="beginner name="beginner" checked>
-								<label for="begginer">Beginner</label>
-							</div>
-							<div class="col-4 col-12-small">
-								<input type="radio" id="intermediate" name="intermediate">
-								<label for="intermediate">Intermediate</label>
-							</div>
-							<div class="col-4 col-12-small">
-								<input type="radio" id="expert" name="expert">
-								<label for="expert">Expert</label>
-							</div>
-	
+							</div>	
 							<h2>Please upload an image of your body</h2>
 							<input type="file" id="img" name="img" accept="image/*">
 							<script type="module" src="node.js">
@@ -93,55 +79,15 @@
 				<button id="launchButton" onclick="launchnodeScript()">Launch node.js Script</button>
 				Output area for node.js script
 				<div id="outputArea"></div> -->
+
+				<button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics</button>
+		
+				<!-- Div to display the results -->
+				<div id="results">
+					<p>Amount of days needed: <span id="days"></span></p>
+				</div>
 			</div>
 
-			<footer id="footer">
-				<section>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="3"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-						</ul>
-					</form>
-				</section>
-				<section class="split contact">
-					<section class="alt">
-						<h3>Address</h3>
-						<p>San Francisco<br />
-						California</p>
-					</section>
-					<section>
-						<h3>Phone</h3>
-						<p><a href="#">(510) 709-5911</a></p>
-					</section>
-					<section>
-						<h3>Email</h3>
-						<p><a href="#">FotoFit@gmail.com</a></p>
-					</section>
-					<section>
-						<h3>Social</h3>
-						<ul class="icons alt">
-							<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</section>
-				</section>
-			</footer>
 
 			<div id="copyright">
 				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
@@ -173,7 +119,7 @@
 		</script> -->
 	<!-- Button to trigger the calculation -->
 		<button onclick="calculateFitnessMetrics()">Calculate Fitness Metrics</button>
-
+		
 		<!-- Div to display the results -->
 		<div id="results">
 			<p>Amount of days needed: <span id="days"></span></p>

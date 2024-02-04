@@ -1,12 +1,14 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  console.log("----- runnign JS 10`--- ")
-  var age = document.getElementById('age').value;  
-  var gender = "male";
-  console.log(age);
-  var weight = 70;
-  var height = 178;
-  var activitylevel = 5;
+  console.log("----- runnign JS 11`--- ")
+  var defaultValue = 70;
+  var age = document.getElementById('age').value ?? defaultValue;
+  var gender = document.getElementById('gender').value ?? 'male';
+  var weight = document.getElementById('weight').value ?? defaultValue;
+  var height = document.getElementById('height').value ?? defaultValue;
+  var activitylevel = document.getElementById('activitylevel').value ?? 4;
+  var hip = document.getElementById('hip').value ?? 45;
+  var neck = document.getElementById('hip').value?? 45;
 
   const bodyfatConfig = {
     method: 'GET',
@@ -16,9 +18,9 @@ function calculateFitnessMetrics() {
       gender: gender.toString(),
       weight: weight.toString(),
       height: height.toString(),
-      neck: '50',
-      waist: '96',
-      hip: '92'
+      neck,
+      waist,
+      hip
     },
     headers: {
       'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
@@ -81,15 +83,19 @@ function calculateFitnessMetrics() {
   
     var calDeficit = (bmr * activity) * 0.25;
     var totalCal = (3500 * (bodyFatValue - (weight * 0.1)));
+    var days = Math.floor(totalCal/calDeficit);
+    console.log(response2.data.data['Body Fat (U.S. Navy Method)'])
 
-    document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
+    document.getElementById('days').textContent = days;
   }).catch(error => {
     console.error(error);
     document.getElementById('results').innerHTML = 'An error occurred. Please try again.';
   });
 
-  axios.request(macrosConfig).then(response => {
+//Rishaan's code -------------------------------------------------------------------------------//
 
+  axios.request(macrosConfig).then(response => {
+    console.log
     console.log("... FOR RISHAN TO INCLUDE ...")
     console.log(response.data)
     // document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
