@@ -36,7 +36,6 @@ function calculateFitnessMetrics() {
       'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
     }
   };
-
   const macrosConfig = {
     method: 'GET',
     url: 'https://fitness-calculator.p.rapidapi.com/macrocalculator',
