@@ -50,7 +50,6 @@ function createCard(obj) {
 
   return card;
 }
-}
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
   console.log("----- running JS 13`--- ");
