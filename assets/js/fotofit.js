@@ -46,12 +46,41 @@ function calculateFitnessMetrics() {
   }).then(response2 => {
     const bodyFatValue = parseFloat(response2.data.data['Body Fat (U.S. Navy Method)']);
     var activity, bmr;
-    // BMR calculation logic here
+    
+    if (gender == 'male') {
+      bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+    } else {
+      bmr = (10 * weight) + (6.25 * height) - (5 * age) - 16;
+    }
 
     var calDeficit, totalCal;
-    // calDeficit and totalCal calculation logic here
+    
+    if (activitylevel == 1) {
+      activity = 1.15;
+    } 
+    if (activitylevel == 2) {
+      activity = 1.35
+    }
+    if (activitylevel == 3) {
+      activity = 1.55
+    }
+    if (activitylevel == 4) {
+      activity = 1.75
+    }
+    if (activitylevel == 5) {
+      activity = 1.75
+    }
+    if (activitylevel == 6) {
+      activity = 1.95
+    }
+    if (activitylevel == 6) {
+      activity = 2
+    }
+  
+    var calDeficit = (bmr * activity) * 0.25;
+    var totalCal = (3500 * (bodyFatValue - (weight * 0.1)));
 
-    document.getElementById('results').innerHTML = `Caloric Deficit: ${calDeficit.toFixed(2)}<br>Total Calories Needed: ${totalCal.toFixed(2)}`;
+    document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
   }).catch(error => {
     console.error(error);
     document.getElementById('results').innerHTML = 'An error occurred. Please try again.';
