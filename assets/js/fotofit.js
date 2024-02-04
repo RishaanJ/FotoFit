@@ -39,7 +39,7 @@ async function getExercises() {
 }
 
 function buttonClick(){
-  window.location.replace("http://RishaanJ.github.io/FotoFit/workoutplan.html);
+  window.location.href = "http://RishaanJ.github.io/FotoFit/workoutplan.html"
   getExercises();
   calculateFitnessMetrics();
 }
