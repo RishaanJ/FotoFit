@@ -1,7 +1,7 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  var age = 25;
-  var gender = 'male';
+  var age = document.getElementbyId('age').value;
+  console.log(age);
   var weight = 70;
   var height = 178;
   var activitylevel = 5;
@@ -40,7 +40,7 @@ function calculateFitnessMetrics() {
       'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
     }
   };
-
+  console.log(macrosConfig);
   axios.request(macrosConfig).then(response => {
     return axios.request(bodyfatConfig);
   }).then(response2 => {

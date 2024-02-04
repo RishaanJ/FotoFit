@@ -1,7 +1,11 @@
 import axios from 'axios';
 
 // Assuming these are the actual values or constants
-var age = 25;
+var age = 25 = document.getElementbyId('age').value;
+
+// Output the values
+console.log('Input Element Value:', inputElementValue);
+console.log('Select Dropdown Value:', selectDropdownValue);
 var gender = 'male';
 var weight = 70;
 var height = 178;
