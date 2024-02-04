@@ -11,6 +11,7 @@ function calculateFitnessMetrics() {
   var hip = document.getElementById('hip').value ?? 90;
   var neck = document.getElementById('neck').value?? 50;
 
+  
   const bodyfatConfig = {
     method: 'GET',
     url: 'https://fitness-calculator.p.rapidapi.com/bodyfat',
