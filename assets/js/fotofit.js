@@ -2,14 +2,14 @@
 function calculateFitnessMetrics() {
   console.log("----- runnign JS 11`--- ")
   var defaultValue = 70;
-  var age = document.getElementById('age').value ?? defaultValue;
+  var age = document.getElementById('age').value ?? 25;
   var gender = document.getElementById('gender').value ?? 'male';
-  var weight = document.getElementById('weight').value ?? defaultValue;
-  var height = document.getElementById('height').value ?? defaultValue;
-  var activitylevel = document.getElementById('activitylevel').value ?? 4;
-  var hip = document.getElementById('hip').value ?? 45;
-  var neck = document.getElementById('hip').value?? 45;
-
+  var weight = document.getElementById('weight').value ?? 70;
+  var height = document.getElementById('height').value ?? 178;
+  var activitylevel = document.getElementById('activitylevel').value ?? 5;
+  var hip = document.getElementById('hip').value ?? 90;
+  var neck = document.getElementById('neck').value?? 50;
+  
   const bodyfatConfig = {
     method: 'GET',
     url: 'https://fitness-calculator.p.rapidapi.com/bodyfat',
