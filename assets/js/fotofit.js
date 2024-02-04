@@ -12,12 +12,12 @@ function calculateFitnessMetrics() {
   // var neck = document.getElementById('neck').value?? 50;
   var age = 25;
   var gender = 'male';
-  var weight = 70;
-  var waist = 102;
-  var height = 168;
+  var weight = 89;
+  var waist = 102.108;
+  var height = 167;
   var activitylevel = 5;
-  var hip = 45;
-  var neck = 30;
+  var hip = 92.0;
+  var neck = 48.3;
 
   const bodyfatConfig = {
     method: 'GET',
