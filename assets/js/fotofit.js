@@ -86,7 +86,7 @@ function calculateFitnessMetrics() {
     var days = Math.floor(totalCal/calDeficit);
     console.log(response2.data.data['Body Fat (U.S. Navy Method)'])
 
-    document.getElementById('days').textContent = days;
+    document.getElementById('days').textContent = Math.floor(totalCal/calDeficit);
   }).catch(error => {
     console.error(error);
     document.getElementById('results').innerHTML = 'An error occurred. Please try again.';
