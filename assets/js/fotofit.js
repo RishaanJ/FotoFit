@@ -19,7 +19,7 @@ function calculateFitnessMetrics() {
       gender: gender.toString(),
       weight: weight.toString(),
       height: height.toString(),
-      neck: neck.toString,
+      neck: neck.toString(),
       waist: waist.toString(),
       hip: hip.toString()
     },
