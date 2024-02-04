@@ -29,9 +29,7 @@ async function getExercises() {
 }
 
 function buttonClick() {
-  window.location.replace("https://RishaanJ.github.io/FotoFit/workoutplan.html");
-  getExercises();
-  calculateFitnessMetrics();
+  console.log("Hey")
 }
 
 function createCard(obj) {
