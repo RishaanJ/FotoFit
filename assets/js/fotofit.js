@@ -1,6 +1,7 @@
 // Assuming Axios is included via a <script> tag in your HTML
 function calculateFitnessMetrics() {
-  var age = document.getElementById('age').value;
+  console.log("----- runnign JS--- ")
+  var age = document.getElementById('age').value;  
   console.log(age);
   var weight = 70;
   var height = 178;
