@@ -34,13 +34,15 @@ async function getExercises() {
       console.error(error);
     }
   })();
-  // Calculate days save into a variable
-  // Display variable in the text #days
   
   
 }
 
-getExercises();
+function clickedButton(){
+  window.location.replace("RishaanJ.github.io/FotoFit/workoutplan.html);
+  getExercises();
+  calculateFitnessMetrics();
+}
 
 
 
@@ -161,8 +163,8 @@ function calculateFitnessMetrics() {
 
     var calDeficit = (bmr * activity) * 0.25;
     var totalCal = (3500 * (bodyFatValue - (weight * 0.1)));
-
-    return Math.floor(totalCal / calDeficit);
+    var days = Math.floor(totalCal / calDeficit);
+    document.getElementById("days").innerHTML = `Do this workout for ${days}`;
   }).catch(error => {
     console.error(error);
     throw new Error('An error occurred. Please try again.');
