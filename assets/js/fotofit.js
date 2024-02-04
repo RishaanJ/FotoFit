@@ -18,9 +18,9 @@ function calculateFitnessMetrics() {
       gender: gender.toString(),
       weight: weight.toString(),
       height: height.toString(),
-      neck,
-      waist,
-      hip
+      neck: neck.toString(),
+      waist: neck.toString(),
+      hip: hip.toString()
     },
     headers: {
       'X-RapidAPI-Key': 'f0a33aa4cbmsh4424abbf48f81ccp13de30jsn26b6983e8bb9',
